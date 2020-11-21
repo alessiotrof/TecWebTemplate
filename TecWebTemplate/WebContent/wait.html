@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <meta charset="UTF-8">
+      <title>JavaScript page</title>
+      <link rel="stylesheet" href="css/default.css" type="text/css">
+      
+      <!-- Inclusione degli script JavaScript -->
+      <script src="js/utility.js"></script> 
+      <!-- Script di Ajax -->
+	  <script src="ajax/load.js"></script> 
+   </head>
+   
+   <!-- Quando il body del documento HTML si carica, vado a lanciare la funzione javascript
+   		"caricaParagrafo(uri, e)",
+ 		dove
+ 		- uri = servletWait?wait=numeroSecondiInsertitiDaUtente
+ 		- e (element) = showContent -->
+   <body onload="caricaParagrafo('servletWait?wait=' + myGetRequestParameter('wait'), myGetElementById('showContent') )">
+
+	<div>
+		
+		<h1>Gestione delle richieste 'fantasma'</h1>
+	    
+		<div id="showContent"/>
+				
+	</div>
+
+   </body>
+   
+</html>
+

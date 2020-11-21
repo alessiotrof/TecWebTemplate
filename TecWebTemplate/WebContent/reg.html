@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Semplice Form</title>
+		<link rel="stylesheet" href="css/default.css" type="text/css">
+      	<!-- Inclusione del JavaScript -->
+	  	<script src="js/pass.js"></script> 
+	</head>
+	
+	<body>
+	
+		<h1>Benvenuto nella pagina di Login!</h1>
+		Inserisci i tuoi dati qui sotto:<br><br> 
+		
+		<!-- Form che utilizza il metodo POST. "servletRegistration" è l'url dove è mappata la Servlet  -->
+		<form method="post" action="servletRegistration">
+			Username: <input name="username" />
+			<br> Nome: <input name="name" />
+			<br> Cognome: <input name="surname" />
+			<!-- Password -->
+		  	<br> Password: <input type="password" id="passwordField" name="password">
+			<!-- Bottone per andare a nascondere la password -->
+			<input type="checkbox" onclick="passHider()">Visualizza password
+			
+			<br><br>
+			
+			<!-- Radio, indica la CheckBox -->
+			Grado di istruzione: 
+			<br><input type="radio" name="education" value="Ingegnere">Ingegnere</input>
+			<br><input type="radio" name="education" value="Fisico"/>Fisico</input>
+			<br><input type="radio" name="education" value="Matematico"/>Matematico</input>
+			<br><input type="radio" name="education" value="Architetto"/>Architetto</input>
+			
+			<br><br>
+			
+			<!-- Select, indica la ComboBox -->
+			Seleziona città di residenza: 
+			<br>
+			<select name ="residence">
+				<option value="Mantova">Mantova</option>
+				<option value="Milano">Milano</option>
+				<option value="Roma">Roma</option>
+				<option value="Bologna">Bologna</option>
+				<option value="Brescia">Brescia</option>
+				<option value="Bergamo">Bergamo</option>
+				<option value="Ravenna">Ravenna</option>
+				<option value="Teramo">Teramo</option>
+				<option value="Napoli">Napoli</option>
+				<option value="Palermo">Palermo</option>
+			</select>
+			
+			
+			<br><br>
+			
+			Seleziona le lingue che parli (puoi selezionarne massimo 4 tenendo premuto CTRL):
+			<br>
+			<select name ="languages" multiple size=4>
+				<option value="Inglese">Inglese</option>
+				<option value="Spagnolo">Spagnolo</option>
+				<option value="Francese">Francese</option>
+				<option value="Tedesco">Tedesco</option>
+				<option value="Greco">Greco</option>
+				<option value="Cinese">Cinese</option>
+				<option value="Giapponese">Giapponese</option>
+				<option value="Indiano">Indiano</option>
+				<option value="Rumeno">Rumeno</option>
+			</select>
+			
+			
+			<br><br>
+			
+			
+			
+			<!-- Submit, permette di inviare i dati -->
+			<input type="submit" value="Procedi"/>
+			
+		</form>
+	</body>
+</html>

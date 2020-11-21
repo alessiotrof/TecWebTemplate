@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <meta charset="UTF-8">
+      <title>JavaScript page</title>
+      <link rel="stylesheet" href="css/default.css" type="text/css">
+      <!-- Inclusione del JavaScript -->
+	  <script src="js/buttons.js"></script> 
+   </head>
+   
+   <body>
+  	   <h1>Benvenuto nella pagina di test di JavaScript!</h1>
+  	   
+		<br><br>
+		
+	 	<br>Semplice Alert: <button onclick="simpleAlert()">Alert!</button>
+	 	<br>Verifica numero primo: <button onclick="checkPrimeNumber()">Numeri primi!</button>
+		<br>Modifica dell'HTML della pagina: <button onclick="editPageHtml()">Modifica HTML!</button>
+		<br>Mostra le informazioni del tuo Browser: <button onclick="getBrowserInfo()">Info Browser!</button>
+		<br>Calcola media voti esami: <button onclick="getExamStats()">Media esami!</button>
+  		
+  		<br><br>
+  		
+  		<!-- Form per il quiz sulla matematica -->
+  		
+  		Quiz matematico! Inserisci il risultato dell'operazione nella casella!<br>
+		<form id="calc">
+			<input disabled="disabled" type="text" name="first" size="15" > +
+			<input disabled="disabled" type="text" name="second" size="15" > =
+			<input type="text" name="sum" size="15">
+			<input type="button" value="Verifica" onClick="compute(this.form)"><br/>
+			<br/>
+			Risultato:
+			<b>
+			<input class="trasp" type="text" name="out" disabled="disabled"/>
+			</b>
+		</form>
+  
+  
+  		<br><br><br>
+  
+  		<!-- Verrà qui accodato il messaggio d'errore delle statistiche dei voti -->
+		<p id="error"></p>
+  
+  
+  		<!-- Verrà qui accodato l'output del terzo bottone -->
+		<p id="buttonEditPageHtml"></p>
+		
+		<br><br>
+		
+		<!-- Verrà qui accodato l'output del quarto bottone -->
+		<p id="buttonGetBrowserInfo"></p>
+		
+
+		
+
+   </body>
+   
+</html>
+

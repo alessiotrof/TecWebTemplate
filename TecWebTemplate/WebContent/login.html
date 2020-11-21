@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Semplice Form</title>
+		<link rel="stylesheet" href="css/default.css" type="text/css">
+      	<!-- Inclusione del JavaScript -->
+	  	<script src="js/pass.js"></script> 
+	</head>
+	
+	<body>
+	
+		<h1>Benvenuto nella pagina di Login!</h1>
+		Inserisci i tuoi dati qui sotto:<br><br> 
+		
+		<!-- Form che utilizza il metodo POST. "servletLogin" è l'url dove è mappata la Servlet  -->
+		<form method="post" action="servletLogin">
+			Username: <input name="username" />
+			<!-- Password -->
+		  	<br> Password: <input type="password" id="passwordField" name="password">
+			<!-- Bottone per andare a nascondere/mostrare la password -->
+			<br> <input type="checkbox" onclick="passHider()">Mostra password
+			
+			<br><br>
+			
+			
+			<!-- Submit, permette di inviare i dati -->
+			<input type="submit" value="Procedi"/>
+			
+		</form>
+	</body>
+</html>

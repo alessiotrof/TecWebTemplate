@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  
+	
+	<!-- The optional display-name element specifies the Web application display name
+	      a short name that can be displayed by GUI tools.-->
+	<display-name>ServletTemplate</display-name>
+  
+	
+	<servlet>
+	
+		<!-- Indica il nome della Servlet, può essere anche "pippo" -->
+    	<servlet-name>ServletRegistration</servlet-name>
+
+		<!-- Indica la classe della Servlet -->
+    	<servlet-class>it.alessio.servlets.ServletRegistration</servlet-class>
+
+  	</servlet>
+
+
+	<servlet>
+	
+		<!-- Indica il nome della Servlet -->
+    	<servlet-name>ServletLogin</servlet-name>
+
+		<!-- Indica la classe della Servlet -->
+    	<servlet-class>it.alessio.servlets.ServletLogin</servlet-class>
+
+  	</servlet>
+
+	<servlet>
+	
+		<!-- Indica il nome della Servlet -->
+    	<servlet-name>ServletWelcome</servlet-name>
+
+		<!-- Indica la classe della Servlet -->
+    	<servlet-class>it.alessio.servlets.ServletWelcome</servlet-class>
+
+  	</servlet>
+
+	<servlet>
+	
+		<!-- Indica il nome della Servlet -->
+    	<servlet-name>ServletWait</servlet-name>
+
+		<!-- Indica la classe della Servlet -->
+    	<servlet-class>it.alessio.servlets.ServletWait</servlet-class>
+
+  	</servlet>
+
+
+
+	<!-- Servlet Mapping a degli URL specifici -->
+
+
+
+	<servlet-mapping>
+	
+		<!-- Vado a mappare il nome della Servlet... -->
+    	<servlet-name>ServletRegistration</servlet-name>
+
+		<!--  ...Al seguente URL
+		(quando apro questo URL, viene lanciata la Servlet indicata) -->
+    	<url-pattern>/servletRegistration</url-pattern>
+
+  	</servlet-mapping>
+
+
+	<servlet-mapping>
+	
+		<!-- Vado a mappare il nome della Servlet... -->
+    	<servlet-name>ServletLogin</servlet-name>
+
+		<!--  ...Al seguente URL
+		(quando apro questo URL, viene lanciata la Servlet indicata) -->
+    	<url-pattern>/servletLogin</url-pattern>
+
+  	</servlet-mapping>
+
+
+	<servlet-mapping>
+	
+		<!-- Vado a mappare il nome della Servlet... -->
+    	<servlet-name>ServletWelcome</servlet-name>
+
+		<!--  ...Al seguente URL
+		(quando apro questo URL, viene lanciata la Servlet indicata) -->
+    	<url-pattern>/servletWelcome</url-pattern>
+
+  	</servlet-mapping>
+
+
+
+	<servlet-mapping>
+	
+		<!-- Vado a mappare il nome della Servlet... -->
+    	<servlet-name>ServletWait</servlet-name>
+
+		<!--  ...Al seguente URL
+		(quando apro questo URL, viene lanciata la Servlet indicata) -->
+		 <url-pattern>/servletWait</url-pattern>
+
+  	</servlet-mapping>
+
+
+	
+	<!-- Indica quale file .html verrà invocato di default -->
+  	<welcome-file-list>
+
+		<!-- Indica quale sarà il file che verrà lanciato di Default
+			 se nessuna Servlet viene scritta nell'URL -->
+    	<welcome-file>index.html</welcome-file>
+
+  	</welcome-file-list>
+
+
+
+
+</web-app>

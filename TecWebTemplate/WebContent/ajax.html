@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <meta charset="UTF-8">
+      <title>JavaScript page</title>
+      <link rel="stylesheet" href="css/default.css" type="text/css">
+      
+      <!-- Inclusione degli script JavaScript -->
+      <script src="js/utility.js"></script> 
+      <script src="js/loadthewait.js"></script> 
+      <!-- Script di Ajax -->
+	  <script src="ajax/demo.js"></script> 
+	  
+   </head>
+   
+   <body>
+  	   <h1>Benvenuto nella pagina di test di Ajax!</h1>
+  	   
+  	    <br> 
+  	    
+  	    Qui avrai a disposizione alcuni esempi di Ajax pronti per essere utilizzati!
+		
+		<br><br><br>
+		
+		Carica una pagina e fai attendere l'utente un certo numero di secondi:<br>
+		<!-- <a href="wait.html?wait=5">Ajax con wait di 5 secondi</a> -->
+		  
+		<!-- Il campo "id" è referenziato dal JavaScript quando si fa getElementById() -->
+		<input name="numberOfSeconds" type="text" maxlength="4" id="numberOfSeconds" value="5"/>
+		<button type="button" onclick="loadTheWait()">OK</button>
+		 
+		<br><br>
+			
+		Puoi mostrare un file XML con Ajax andando a cliccare il bottone qui sotto (non funziona molto bene):<br>
+		<button type="button" onclick="loadXml()">Mostra XML!</button>
+		<p id="xml"></p>
+		
+		<br><br>
+		
+		Puoi mostrare un file JSON con Ajax andando a cliccare il bottone qui sotto:<br>
+		<button type="button" onclick="loadJsonObject()">Mostra oggetto JSON!</button>
+		<p id="json"></p>
+		
+		<br><br>
+
+
+		Mostra contenuto di un file presente in un certo URI con Ajax:<br>
+		<form>
+			<input type="text" id="uri" value="save/savedusers.dat"/>
+			<button type="button"  onclick="caricaTesto( myGetElementById('uri').value, myGetElementById('changeMe') )">Mostra!</button>
+		</form>
+		<p id="changeMe"></p>
+		
+		<br><br>
+
+   </body>
+   
+</html>
+
