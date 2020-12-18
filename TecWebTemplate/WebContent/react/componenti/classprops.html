@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+        <head>
+                 <meta charset="UTF-8" />
+                 <title>Esempio di classe con impiego di props</title>
+                 <script src="https://unpkg.com/react@15/dist/react.js"></script>
+		 <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+                 <!--<script src="https://fb.me/react-with-addons-0.14.0.js"></script>
+                 <script src="https://fb.me/react-dom-0.14.0.js"></script>-->
+                 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.js"></script>
+	</head>
+
+        <body>
+		 <div id="root"></div>
+		 <script type="text/babel">
+
+	         	class Car extends React.Component {
+				render(){				
+					return <h2>I am a Car. My name is {this.props.nome}!</h2>;
+				}
+			}
+
+			ReactDOM.render(<Car nome="Saetta McQueen"/>, document.getElementById('root'));
+     		 
+		</script>
+	</body>
+</html>

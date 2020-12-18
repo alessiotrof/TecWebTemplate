@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+        <head>
+                 <meta charset="UTF-8" />Form con select da gestire</title>
+                 <script src="https://unpkg.com/react@15/dist/react.js"></script>
+		 <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+                 <!--<script src="https://fb.me/react-with-addons-0.14.0.js"></script>
+                 <script src="https://fb.me/react-dom-0.14.0.js"></script>-->
+                 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.js"></script>
+	</head>
+
+        <body>
+		 <div id="root"></div>
+		 <script type="text/babel">
+			class FormGusti extends React.Component {
+			  constructor(props) {
+			    super(props);
+			    this.state = {value: 'cocco'};
+			    this.handleChange = this.handleChange.bind(this);
+			    this.handleSubmit = this.handleSubmit.bind(this);
+			  }
+
+			  handleChange(event) {    this.setState({value: event.target.value});  
+						   console.log('onChange: lo stato ora vale ' + event.target.value);
+			  }
+			  handleSubmit(event) {
+			    alert('Il tuo gusto preferito è: ' + this.state.value);
+			    event.preventDefault();
+			  }
+
+			  render() {
+			    return (
+			      <form onSubmit={this.handleSubmit}>
+				<label>
+				  Seleziona il tuo gusto preferito:
+				  <select            value={this.state.value}
+				    onChange={this.handleChange}>
+				    <option value="pompelmo">Pompelmo</option>
+				    <option value="limone">Limone</option>
+				    <option value="cocco">Cocco</option>
+				    <option value="mango">Mango</option>
+				  </select>
+				</label>
+				<input type="submit" value="Submit" />
+			      </form>
+			    );
+			  }
+			}
+
+			ReactDOM.render(<FormGusti />, document.getElementById('root'));
+		 
+		</script>
+	</body>
+</html>
+

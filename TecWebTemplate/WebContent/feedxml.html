@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+		<title>Eesempio di AJAX XML</title>
+     	 <meta charset="UTF-8">
+	      <link rel="stylesheet" href="css/default.css" type="text/css">
+	      <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/>
+		  <script src="js/utility.js"></script>
+		  <script src="ajax/rssparser-xml.js"></script>
+		  <script src="ajax/suggester.js"></script>
+	</head>
+
+	<body>
+	
+		<div>
+			
+			<h1>Parsing di un contenuto XML</h1>
+		    
+			<div>
+				<p>Inserisci la categoria di notizie da consultare:</p>
+				<form>
+					<input id="category" type="text" value="" onKeyUp="caricaCategoria( 'servletSuggest?startsWith='+myGetElementById('category').value, myGetElementById('category') )"/>
+					<button id="clickMe" onclick="caricaFeed( 'jsp/feed.jsp?category='+myGetElementById('category').value, myGetElementById('feed') )">Cerca</button>
+				</form>
+				<div id="feed"/>
+			</div>
+	
+		</div>
+		
+		<br/>
+		<br/>
+		
+		<br><br><a href="index.jsp">Torna alla pagina principale</a>
+		
+	</body>
+
+</html>

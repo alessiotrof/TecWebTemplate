@@ -1,8 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-   pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+   pageEncoding="UTF-8"%>
 
 <!-- import di classi Java Bean -->
-<%@ page import="it.alessio.beans.SimpleBean"%>
+<%@ page import="it.tecwebtemplate.beans.Clock"%>
 
 
 <!DOCTYPE html>
@@ -10,10 +10,12 @@
 <html>
 
 	<head>
-		<meta charset="ISO-8859-1">
-		<title>Test JSP</title>
+      	<meta charset="UTF-8">
+		<title>Test di una JSP</title>
+		
 		<!-- Inclusione CSS  -->
-    	<link rel="stylesheet" href="../css/default.css" type="text/css">
+    	<!-- <link rel="stylesheet" href="../css/default.css" type="text/css">  -->
+    	<link rel="stylesheet" href="<%=request.getContextPath()%>/css/default.css" type="text/css"/>
 	</head>
 	
 	<body>
@@ -21,9 +23,9 @@
 	  	<h1>Test di una JSP </h1>
 	  	
 	  	<!-- Uso la Java Bean -->
-		<jsp:useBean id="timeBean" class="it.alessio.beans.SimpleBean" scope="request" />
+		<jsp:useBean id="timeBean" class="it.tecwebtemplate.beans.Clock" scope="request" />
 		
-	  	<!-- Questo è il codice Scriplet  -->
+	  	<!-- Questo Ã¨ il codice Scriplet  -->
 	  	<b>
 	  	    Java Bean attuale: <%= timeBean %>
 	  	    
@@ -38,14 +40,12 @@
 	  	<br>
 	  	<br>
 	  	
-	  	<!-- Questo è il codice di Dichiarazione  -->
-	  	<%!
-	  		public int add(int a, int b){
+	  	<!-- Questo Ã¨ il codice di Dichiarazione  -->
+	  	<%!public int add(int a, int b){
 	  			return a + b;
-	  		}
-	  	%>
+	  		}%>
 	  	
-	  	<!-- Questo è il codice Scriplet  -->
+	  	<!-- Questo Ã¨ il codice Scriplet  -->
 	  	<%
 	  		// Normale codice java
 	  		
@@ -56,11 +56,11 @@
 
 	  	%>
 	  	
-	 	<!-- Questo è il codice di Espressione -->
-	  	Il valore di C è: <%=c%>
+	 	<!-- Questo Ã¨ il codice di Espressione -->
+	  	Il valore di C Ã¨: <%=c%>
 	  	
 	  	
-	  	<!-- Questo è il codice Scriplet  -->
+	  	<!-- Questo Ã¨ il codice Scriplet  -->
 	  	<%
 	  		c = add(1000, 1000);
 	  	
@@ -68,7 +68,7 @@
 	  	
 	  	<br>
 
-	  	Il valore di C restituito dalla funzione è: <%=c%>
+	  	Il valore di C restituito dalla funzione Ã¨: <%=c%>
 	  	
 	  	<br>
 	  	
@@ -77,10 +77,11 @@
 	  			
 	  	%>
 	  	
-	  	Il valore di i è: <%=i%><br>
+	  	Il valore di i Ã¨: <%=i%><br>
 	  	
 	  	<%  } %>
 
+	<br><br><a href="../index.jsp">Torna alla pagina principale</a>
 	  	
 	</body>
 	

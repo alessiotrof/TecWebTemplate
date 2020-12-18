@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+        <head>
+                 <meta charset="UTF-8" />
+                 <title>Esempio sintassi JSX</title>
+                 <script src="https://fb.me/react-with-addons-0.14.0.js"></script>
+                 <script src="https://fb.me/react-dom-0.14.0.js"></script>
+                 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.js"></script>
+	</head>
+
+        <body>
+		 <div id="container"></div>
+		 <script type="text/babel">
+
+	         	const listElement = <ul className="list-of-items">
+            					<li className="item-1" key="key-1">Item 1</li>
+				                <li className="item-2" key="key-2">Item 2</li>
+					        <li className="item-3" key="key-3">Item 3</li>
+					    </ul>;
+
+			ReactDOM.render(listElement, document.getElementById('container'));
+     		 
+		</script>
+	</body>
+</html>

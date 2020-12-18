@@ -1,7 +1,13 @@
+// File Javascript che contiene tutte le funzioni da utilizzare
+// per i bottoni presenti nella pagina "javascript.html"
+
+
+// Semplice alert
 function simpleAlert(){
-	alert("Test di JavaScript 1!");
+	alert("Questo e' il testo di un messaggio di Alert!");
 }
 
+// Controlla che un dato numero inserito dall'utente sia primo o no
 function checkPrimeNumber(){
 
 	// Ottengo l'input digitato dall'utente
@@ -32,6 +38,8 @@ function checkPrimeNumber(){
 	}
 }
 
+// Modifica l'HTML di un paragrafo presente nella pagina HTML
+// In questo caso: <p id="buttonEditPageHtml"></p>
 function editPageHtml(){
 	
 	alert("Come per magia, l'HTML della tua pagina verra' ora modificato!");
@@ -39,6 +47,8 @@ function editPageHtml(){
 	document.getElementById("buttonEditPageHtml").innerHTML = "Ecco l'HTML della pagina modificato da JavaScript!";
 }
 
+// Modifica l'HTML di un paragrafo presente nella pagina HTML
+// In questo caso: <p id="buttonGetBrowserInfo"></p>
 function getBrowserInfo(){
 
 	alert("Hey, adesso leggero' i tuoi dettagli! Spero non ti dispiaccia!");
@@ -47,6 +57,7 @@ function getBrowserInfo(){
 }
 
 
+// Calcola alcune statistiche sui voti scritti 
 function getExamStats(){
 
 
@@ -70,16 +81,17 @@ function getExamStats(){
 		document.getElementById("error").innerHTML = "Errore: non hai inserito correttamente alcuni voti!";
 	}else{
 	
-		// Definizione oggetto statistica
+		// Definizione dell'oggetto "statistica"
 		var statistica = new Object();
 		
 		// Trovo il minimo 
 		// (e intanto anche la somma totale)
-		statistica.min = voti[0];
+		statistica.min = voti[0]; // Aggiungo una variabile al mio oggetto statistica chiamata "min"
 		var somma = 0;
 		for(var i = 0; i< voti.length; i++){
-		
-			somma += voti[i]; // Intanto calcolo anche la somma totale
+			
+			// Intanto calcolo anche la somma totale
+			somma += voti[i]; 
 			
 			if(statistica.min > voti[i]){
 				statistica.min = voti[i];	
@@ -111,7 +123,9 @@ function getExamStats(){
 		var urlString = "results.html?arr="+arrayString+"&min="+statistica.min+"&max="+statistica.max+"&mid="+statistica.media;
 		
 		// Simulo ridirezione HTTP
-		location.replace(urlString);
+		// location.replace(urlString);  -- NO! Meglio fare cosi':
+		location.href = urlString;
+
 
 		// Simulate a mouse click:
 		//window.location.href = "http://www.w3schools.com";
@@ -153,7 +167,7 @@ function compute(field){
 
 }
 
-// Appena viene caricata la pagina, la funzione fill() verrà lanciata!
+// Appena viene caricata la pagina, la funzione "fill()" verrà lanciata!
 onload = fill;
 
 

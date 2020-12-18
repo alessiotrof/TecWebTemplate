@@ -3,8 +3,9 @@
 
    <head>
       <meta charset="UTF-8">
-      <title>JavaScript page</title>
+      <title>Pagina JavaScript</title>
       <link rel="stylesheet" href="css/default.css" type="text/css">
+      <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/>
       <!-- Inclusione del JavaScript -->
 	  <script src="js/buttons.js"></script> 
    </head>
@@ -23,17 +24,18 @@
   		<br><br>
   		
   		<!-- Form per il quiz sulla matematica -->
-  		
   		Quiz matematico! Inserisci il risultato dell'operazione nella casella!<br>
 		<form id="calc">
 			<input disabled="disabled" type="text" name="first" size="15" > +
 			<input disabled="disabled" type="text" name="second" size="15" > =
 			<input type="text" name="sum" size="15">
+			<!-- IMPORTANTE: quando viene cliccato "Verifica" la funzione "compute()" viene avviata,
+			passandogli come argomento il form stesso! -->
 			<input type="button" value="Verifica" onClick="compute(this.form)"><br/>
 			<br/>
 			Risultato:
 			<b>
-			<input class="trasp" type="text" name="out" disabled="disabled"/>
+			<input type="text" name="out" disabled="disabled"/>
 			</b>
 		</form>
   
@@ -51,9 +53,7 @@
 		
 		<!-- Verrà qui accodato l'output del quarto bottone -->
 		<p id="buttonGetBrowserInfo"></p>
-		
 
-		
 
    </body>
    

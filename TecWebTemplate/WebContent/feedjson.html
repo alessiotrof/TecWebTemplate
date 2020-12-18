@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+		<title>Esempio di AJAX JSON</title>
+     	 <meta charset="UTF-8">
+	      <link rel="stylesheet" href="css/default.css" type="text/css">
+          <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/>
+		  <script src="js/utility.js"></script>
+		  <script src="js/json.js"></script>
+		  <script src="ajax/rssparser-json.js"></script>
+		  <script src="ajax/suggester.js"></script>
+	</head>
+
+	<body>
+	
+		<div>
+			
+			<h1>Parsing di un contenuto JSON</h1>
+		    
+			<div>
+				<p>Inserisci la categoria di notizie da consultare:</p>
+				<!-- 
+					Ogni volta che viene premuto un tasto, invoca la funzione "caricaCategoria(uri, e)" in ajax/suggester.js
+					questa funzione si occupa di andare a restituire 
+				-->
+				<form><input id="category" type="text" value="" onKeyUp="caricaCategoria( 'servletSuggest?startsWith='+myGetElementById('category').value, myGetElementById('category') )"/>
+				<button id="clickMe" onclick="caricaFeed( 'servletJson?category='+myGetElementById('category').value, myGetElementById('feed') )">Cerca</button>
+				</form>
+				<div id="feed"/>
+			</div>
+	
+		</div>
+		
+		<br/>
+		<br/>
+		
+		<br><br><a href="index.jsp">Torna alla pagina principale</a>
+		
+	</body>
+
+</html>

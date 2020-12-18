@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+        <head>
+                 <meta charset="UTF-8" />
+                 <title>Esempio di ispezione di un evento</title>
+                 <script src="https://unpkg.com/react@15/dist/react.js"></script>
+		 <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+                 <!--<script src="https://fb.me/react-with-addons-0.14.0.js"></script>
+                 <script src="https://fb.me/react-dom-0.14.0.js"></script>-->
+                 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.js"></script>
+	</head>
+
+        <body>
+		 <div id="root"></div>
+		 <script type="text/babel">
+			class App extends React.Component {
+			  constructor(props) {
+			    super(props);
+			  }
+			  handleClick(e) {
+			    console.log(`Pulsante premuto - Evento ${e.type}`);
+			  }
+			  render() {
+			    return (
+			      /* passiamo un riferimento al metodo handleClick */
+			      <button onClick={this.handleClick} >Pulsante</button>
+			    )
+			  }
+			}
+			
+			ReactDOM.render(
+			  <App />,
+			  document.getElementById('root')
+  		      	);
+		 
+		</script>
+	</body>
+</html>
+

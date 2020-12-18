@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+   <head>
+      <meta charset="UTF-8">
+      <title>Template</title>
+      <link rel="stylesheet" href="../css/default.css" type="text/css">
+      <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico"/>
+      <!-- Inclusione degli script JavaScript -->
+      <script src="../js/utility.js"></script>
+      <script src="../js/calculator.js"></script>  
+   </head>
+   
+   <body>
+      <h1>WebSockets - Calcolatrice multiutente</h1>
+      
+      <br><br>
+			
+			<form id="calc">
+			
+	      		<input name="numberOne" type="text" maxlength="10" id="numberOne" value="10" onkeyup="sendNumberOne()"/>
+	      		<input name="operation" type="text" maxlength="1" id="operation" value="+" onkeyup="sendOperation()"/>
+	      		<input name="numberTwo" type="text" maxlength="10" id="numberTwo" value="20" onkeyup="sendNumberTwo()"/>
+	      		
+				<!-- IMPORTANTE: quando viene cliccato "Verifica" la funzione "calculate()" viene avviata -->
+				<input type="button" value="Calcola" onClick="calculate()"><br/>
+				<br/>
+				Risultato:
+				<b>
+				<input name="result" type="text" id="result" disabled="disabled"/>
+				</b>
+				
+			</form>
+			
+			
+      
+      <br><br>
+      
+      <br><br><a href="../index.jsp">Torna alla pagina principale</a>
+      
+   </body>
+</html>

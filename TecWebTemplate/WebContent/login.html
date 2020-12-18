@@ -3,19 +3,21 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>Semplice Form</title>
+		<title>Login</title>
 		<link rel="stylesheet" href="css/default.css" type="text/css">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/>
       	<!-- Inclusione del JavaScript -->
 	  	<script src="js/pass.js"></script> 
 	</head>
 	
 	<body>
 	
-		<h1>Benvenuto nella pagina di Login!</h1>
+		<h1>Pagina di Login</h1>
 		Inserisci i tuoi dati qui sotto:<br><br> 
 		
 		<!-- Form che utilizza il metodo POST. "servletLogin" è l'url dove è mappata la Servlet  -->
 		<form method="post" action="servletLogin">
+			<!-- Username -->
 			Username: <input name="username" />
 			<!-- Password -->
 		  	<br> Password: <input type="password" id="passwordField" name="password">
@@ -29,5 +31,8 @@
 			<input type="submit" value="Procedi"/>
 			
 		</form>
+		
+		<br><br><a href="index.jsp">Torna alla pagina principale</a>
+		
 	</body>
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+        <head>
+                 <meta charset="UTF-8" />
+                 <title>Esempio di gestione degli eventi</title>
+                 <script src="https://unpkg.com/react@15/dist/react.js"></script>
+		 <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+                 <!--<script src="https://fb.me/react-with-addons-0.14.0.js"></script>
+                 <script src="https://fb.me/react-dom-0.14.0.js"></script>-->
+                 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.js"></script>
+	</head>
+
+        <body>
+		 <div id="root"></div>
+		 <script type="text/babel">
+
+	         	class Interruttore extends React.Component {
+			  constructor(props) {
+			    super(props);
+			    this.state = {acceso: true};
+
+			    // Necessario per accedere al corretto valore di 'this' all'interno della callback
+			    this.handleClick = this.handleClick.bind(this);
+			  }
+
+			  handleClick() {
+			    //this.setState(state => ({
+			      //acceso: !state.acceso
+			    //}));
+			    this.setState({acceso: !this.state.acceso});
+			  }
+
+			  render() {
+			    return (
+			      <button onClick={this.handleClick}>
+				{this.state.acceso ? 'Acceso' : 'Spento'}
+			      </button>
+			    );
+			  }
+			}
+
+			ReactDOM.render(
+			  <Interruttore />,
+			  document.getElementById('root')
+		      );
+     		 
+		</script>
+	</body>
+</html>
+

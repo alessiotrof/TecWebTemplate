@@ -28,17 +28,15 @@ function myGetElementById(idElemento) {
 // compatibilita' per Browser legacy
 function myGetXmlHttpRequest() {
 
-
 	// Risultato 
 	var xhr = false;
-	// Opzioni activeX dal pi� nuovo al piu' vecchio (Browser Legacy)
+	// Opzioni activeX dal piu' nuovo al piu' vecchio (Browser Legacy)
 	var activeXoptions = new Array( "Microsoft.XmlHttp", "MSXML4.XmlHttp", "MSXML3.XmlHttp", "MSXML2.XmlHttp", "MSXML.XmlHttp" );
 
 	// Primo tentativo: come oggetto nativo
 	try { 
 		xhr = new XMLHttpRequest(); 
-	} 
-	catch (e) { 
+	}catch (e) { 
 		// Non facciamo niente... semplicemente proviamo un altro modo
 	}
 
@@ -101,8 +99,6 @@ function myGetRequestParameter(parameterName) {
 	}
 
 }
-
-
 
 
 // Funzione per recuperare per nome l'elemento figlio di un elemento dato

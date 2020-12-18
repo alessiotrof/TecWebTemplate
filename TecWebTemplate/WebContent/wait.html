@@ -3,8 +3,9 @@
 
    <head>
       <meta charset="UTF-8">
-      <title>JavaScript page</title>
+      <title>Pagina di Wait</title>
       <link rel="stylesheet" href="css/default.css" type="text/css">
+      <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/>
       
       <!-- Inclusione degli script JavaScript -->
       <script src="js/utility.js"></script> 
@@ -12,18 +13,24 @@
 	  <script src="ajax/load.js"></script> 
    </head>
    
-   <!-- Quando il body del documento HTML si carica, vado a lanciare la funzione javascript
-   		"caricaParagrafo(uri, e)",
- 		dove
+   	<!-- 
+   		Quando il body del documento HTML si carica, vado a lanciare la funzione JavaScript (Ajax)
+   
+   		"caricaParagrafo(uri, e)" in load.js
+   		
+ 		 dove:
+ 		 
  		- uri = servletWait?wait=numeroSecondiInsertitiDaUtente
- 		- e (element) = showContent -->
+ 		- e (element) = showContent
+ 		
+ 	-->
    <body onload="caricaParagrafo('servletWait?wait=' + myGetRequestParameter('wait'), myGetElementById('showContent') )">
 
 	<div>
 		
 		<h1>Gestione delle richieste 'fantasma'</h1>
 	    
-		<div id="showContent"/>
+		<div id="showContent"></div>
 				
 	</div>
 

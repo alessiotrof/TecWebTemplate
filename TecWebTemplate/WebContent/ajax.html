@@ -3,8 +3,9 @@
 
    <head>
       <meta charset="UTF-8">
-      <title>JavaScript page</title>
+      <title>Pagina Ajax</title>
       <link rel="stylesheet" href="css/default.css" type="text/css">
+      <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/>
       
       <!-- Inclusione degli script JavaScript -->
       <script src="js/utility.js"></script> 
@@ -24,10 +25,19 @@
 		<br><br><br>
 		
 		Carica una pagina e fai attendere l'utente un certo numero di secondi:<br>
-		<!-- <a href="wait.html?wait=5">Ajax con wait di 5 secondi</a> -->
 		  
+		
+		<!-- 
+			Qui sotto, viene invocata la funzione "loadTheWait()" presente in loadthewait.js, che si occupa di fare:
+			1) controllo se il valore inserito è un numero
+			2) esegue le istruzioni seguenti:
+			
+				var urlString = "wait.html?wait=" + seconds; -- Questa pagina carica una Servlet in body onload
+				location.href = urlString;
+		-->
+		
 		<!-- Il campo "id" è referenziato dal JavaScript quando si fa getElementById() -->
-		<input name="numberOfSeconds" type="text" maxlength="4" id="numberOfSeconds" value="5"/>
+		<input name="numberOfSeconds" type="text" maxlength="3" id="numberOfSeconds" value="5"/>
 		<button type="button" onclick="loadTheWait()">OK</button>
 		 
 		<br><br>
@@ -47,13 +57,25 @@
 
 		Mostra contenuto di un file presente in un certo URI con Ajax:<br>
 		<form>
-			<input type="text" id="uri" value="save/savedusers.dat"/>
+			<input type="text" id="uri" value="json/example.json"/>
+			<!-- Avvio la funzione caricaTesto da demo.js, passando come URI il valore immesso nell'input e come element da cambiare il paragrafo sotto -->
 			<button type="button"  onclick="caricaTesto( myGetElementById('uri').value, myGetElementById('changeMe') )">Mostra!</button>
 		</form>
+		<!-- Verrà modificato con il testo contenuto dal file identificato dall'input field sopra -->
 		<p id="changeMe"></p>
 		
-		<br><br>
+		<br>
+		
+		<a href="feedjson.html">Aggiornamento asincrono di una parte del DOM con contenuto JSON</a>
+		
+		<br>
+		
+		<a href="feedxml.html">Aggiornamento asincrono di una parte del DOM con contenuto XML</a>
+		
 
+		
+		<br><br><a href="index.jsp">Torna alla pagina principale</a>
+		
    </body>
    
 </html>
