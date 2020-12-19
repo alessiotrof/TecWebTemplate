@@ -41,7 +41,7 @@
       <br><br>
       <% 
 		
-      // Aggiungo l'username di default dell'admin
+      	// Aggiungo l'username di default dell'admin
 	   	String adminDefaultUsername = (String) application.getAttribute("adminDefaultUsername");
 	   	if(adminDefaultUsername == null){
 	   		application.setAttribute("adminDefaultUsername", "admin");
@@ -64,8 +64,8 @@
 			
 			// Creo l'utente "admin"
 			User admin = new User();
-			admin.setUsername(adminDefaultUsername);
-			admin.setPassword(adminDefaultPassword);
+			admin.setUsername((String)application.getAttribute("adminDefaultUsername"));
+			admin.setPassword((String)application.getAttribute("adminDefaultPassword"));
 			
 			// Aggiungo l'admin al Database
 			db.addUser(admin);
