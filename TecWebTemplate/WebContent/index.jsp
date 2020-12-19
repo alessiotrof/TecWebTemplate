@@ -40,13 +40,19 @@
       
       <br><br>
       <% 
-
-    	final String adminDefaultUsername = "admin";
-   		final String adminDefaultPassword = "admin";
-   	
-	   	application.setAttribute("adminDefaultUsername", adminDefaultUsername);
-	   	application.setAttribute("adminDefaultPassword", adminDefaultPassword);
-	    
+		
+      // Aggiungo l'username di default dell'admin
+	   	String adminDefaultUsername = (String) application.getAttribute("adminDefaultUsername");
+	   	if(adminDefaultUsername == null){
+	   		application.setAttribute("adminDefaultUsername", "admin");
+	   	}
+	   	
+	   	// Aggiungo la password di default dell'admin
+	   	String adminDefaultPassword = (String) application.getAttribute("adminDefaultPassword");
+	   	if(adminDefaultUsername == null){
+	   		application.setAttribute("adminDefaultPassword", "admin");
+	   	}
+	   	
 	 	// Ottengo il Database 
 	  	UserDB db = (UserDB)application.getAttribute("database");
 	 	
@@ -141,7 +147,7 @@
 			
 		}else {
 			%>
-			<b>Non sei loggato nel sito!</b><br><br>
+			<b><br>Non sei loggato nel sito!</b><br><br>
 			<%
 		}
       %>
